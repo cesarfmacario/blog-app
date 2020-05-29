@@ -1,2 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
-// @import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap";
+
+.navbar-header {
+  float: left;
+  // padding: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.navbar-brand {float:none;}
+
+.tarjeta {
+  cursor: pointer;
+  color: #444;
+  max-width: 100%;
+  padding: 25px 20px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px rgba(55, 55, 55, 0.5);
+
+  .titulo-tarjeta {
+    text-transform: capitalize;
+    font-size: 25px;
+  }
+
+  .titulo-descripcion {
+    text-transform: capitalize;
+  }
+
+}
+
+.singlepost {
+  .titulo {
+    text-transform: capitalize;
+  }
+
+  .user {
+    color: #4F81B2;
+  }
+
+  .descripcion {
+    text-transform: capitalize;
+  }
+
+  .comentario {
+    * {
+      color: #444;
+    }
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+
+    .titulo-comentario {
+      font-weight: bold;
+    }
+
+    .descripcion-comentario {
+
+    }
+  }
+}

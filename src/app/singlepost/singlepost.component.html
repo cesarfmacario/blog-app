@@ -1,0 +1,37 @@
+<div class="text-center mt-4" *ngIf="loading">
+  Loading...
+</div>
+
+<div class="singlepost mt-4" *ngIf="!loading && post.title">
+  <h1>
+    <strong class="titulo">
+      {{ post.title }}
+    </strong>
+  </h1>
+
+  <div class="user mt-2 mb-2">By user: {{ post.userId }} </div>
+
+  <div class="descripcion" [innerHTML]="post.body"></div>
+
+  <h2 class="mt-4 pt-4" style="color: #444">Comments</h2>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="comentario" *ngFor="let com of comentarios;">
+        <div class="titulo-comentario">
+          {{ com.email }}
+        </div>
+        <div class="descripcion-comentario">
+          {{ com.body }}
+        </div>
+      </div>
+    </div>
+    <div class="col-12 mt-4 text-right">
+      <button type="button" class="btn btn-dark" (click)="goBack()">Dashboard</button>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+</div>
